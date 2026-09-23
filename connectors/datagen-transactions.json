@@ -1,0 +1,11 @@
+{
+  "name": "datagen-transactions",
+  "config": {
+    "connector.class": "DatagenSource",
+    "kafka.topic": "transactions",
+    "output.data.format": "AVRO",
+    "schema.filename": "schemas/transactions.avsc",
+    "max.interval": "1000",
+    "tasks.max": "1"
+  }
+}
