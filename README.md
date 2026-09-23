@@ -1,6 +1,9 @@
 # GuardPay — Real-Time Payment Fraud Detection on Confluent Cloud + Flink
 
-GuardPay scores card payments and flags fraudulent transactions the moment they happen, instead of finding fraud later in a next-day report. It runs entirely as streaming SQL on Confluent Cloud. There are Connectors available in Confluent - these connectors help you to fetch live data from stream . IN this scenario, I have tried to simulate a card transaction system where there would be m,ultiple card transacations that are populated. The Connectors bring in a live stream of card transactions plus reference data for cardholders and merchant risk. THe Merchant Risk is generated from sample schemas for this demo. 
+GuardPay scores card payments and flags fraudulent transactions the moment they happen, instead of finding fraud later in a next-day report. It runs entirely as streaming SQL on Confluent Cloud. There are Connectors available in Confluent - these connectors help you to fetch live data from stream. 
+
+IN this scenario, I have tried to simulate a card transaction system where there would be multiple card transacations that are populated. The Connectors bring in a live stream of card transactions plus reference data for cardholders and merchant risk. THe Merchant Risk is generated from sample schemas for this demo. 
+
 Using Apache Flink, I created tables that join each transaction to the cardholder and merchant risk, keep a rolling per-card profile, and assign a fraud risk score using both rules (velocity, impossible travel, high-risk merchant, large amounts) and a built-in anomaly check on spend. 
 
 A sink connector pushes the alerts out to a downstream system. Every stream is governed by Schema Registry and the whole flow is visible in Stream Lineage.
