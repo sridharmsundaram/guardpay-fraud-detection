@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "Cardholder",
+  "fields": [
+    {"name": "card_id",      "type": {"type": "string", "arg.properties": {"options": ["C-0001","C-0002","C-0003","C-0004","C-0005","C-0006","C-0007","C-0008","C-0009","C-0010"]}}},
+    {"name": "holder_name",  "type": {"type": "string", "arg.properties": {"options": ["Holder_001","Holder_002","Holder_003","Holder_004","Holder_005","Holder_006","Holder_007","Holder_008","Holder_009","Holder_010"]}}},
+    {"name": "home_country", "type": {"type": "string", "arg.properties": {"options": ["US","IN","GB","DE"]}}},
+    {"name": "card_tier",    "type": {"type": "string", "arg.properties": {"options": ["standard","gold","platinum"]}}},
+    {"name": "credit_limit", "type": {"type": "int",    "arg.properties": {"range": {"min": 1000, "max": 50000}}}}
+  ]
+}
