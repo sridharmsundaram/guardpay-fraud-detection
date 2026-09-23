@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "Transaction",
+  "fields": [
+    {"name": "txn_id",   "type": {"type": "string", "arg.properties": {"iteration": {"start": 1000000000, "step": 1}}}},
+    {"name": "card_id",  "type": {"type": "string", "arg.properties": {"options": ["C-0001","C-0002","C-0003","C-0004","C-0005","C-0006","C-0007","C-0008","C-0009","C-0010"]}}},
+    {"name": "amount",   "type": {"type": "double", "arg.properties": {"range": {"min": 1.0, "max": 5000.0}}}},
+    {"name": "currency", "type": {"type": "string", "arg.properties": {"options": ["USD","EUR","INR","GBP"]}}},
+    {"name": "country",  "type": {"type": "string", "arg.properties": {"options": ["US","IN","GB","DE","NG","RU","BR"]}}},
+    {"name": "merchant_id", "type": {"type": "string", "arg.properties": {"options": ["M-001","M-002","M-003","M-004","M-005","M-006","M-007","M-008"]}}},
+    {"name": "category", "type": {"type": "string", "arg.properties": {"options": ["grocery","fuel","electronics","travel","gaming","crypto","jewelry"]}}},
+    {"name": "channel",  "type": {"type": "string", "arg.properties": {"options": ["chip","online","contactless","manual"]}}}
+  ]
+}
