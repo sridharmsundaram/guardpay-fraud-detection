@@ -1,0 +1,13 @@
+{
+  "name": "http-sink-fraud-alerts",
+  "config": {
+    "connector.class": "HttpSink",
+    "topics": "fraud_alerts",
+    "input.data.format": "JSON",
+    "http.api.url": "https://webhook.site/REPLACE_WITH_YOUR_URL",
+    "request.method": "POST",
+    "request.body.format": "json",
+    "headers": "Content-Type:application/json",
+    "tasks.max": "1"
+  }
+}
