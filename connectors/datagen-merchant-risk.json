@@ -1,0 +1,11 @@
+{
+  "name": "datagen-merchant-risk",
+  "config": {
+    "connector.class": "DatagenSource",
+    "kafka.topic": "merchant_risk",
+    "output.data.format": "AVRO",
+    "schema.filename": "schemas/merchant_risk.avsc",
+    "max.interval": "5000",
+    "tasks.max": "1"
+  }
+}
