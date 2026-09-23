@@ -1,0 +1,11 @@
+{
+  "name": "datagen-cardholders",
+  "config": {
+    "connector.class": "DatagenSource",
+    "kafka.topic": "cardholders",
+    "output.data.format": "AVRO",
+    "schema.filename": "schemas/cardholders.avsc",
+    "max.interval": "5000",
+    "tasks.max": "1"
+  }
+}
