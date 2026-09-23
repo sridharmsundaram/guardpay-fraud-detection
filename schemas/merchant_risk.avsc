@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "MerchantRisk",
+  "fields": [
+    {"name": "merchant_id",  "type": {"type": "string", "arg.properties": {"options": ["M-001","M-002","M-003","M-004","M-005","M-006","M-007","M-008"]}}},
+    {"name": "merchant_name","type": {"type": "string", "arg.properties": {"options": ["Merchant_001","Merchant_002","Merchant_003","Merchant_004","Merchant_005","Merchant_006","Merchant_007","Merchant_008"]}}},
+    {"name": "risk_rating",  "type": {"type": "int",    "arg.properties": {"range": {"min": 0, "max": 100}}}},
+    {"name": "mcc",          "type": {"type": "string", "arg.properties": {"options": ["5411","5541","5732","4722","7995","6051","5944"]}}}
+  ]
+}
